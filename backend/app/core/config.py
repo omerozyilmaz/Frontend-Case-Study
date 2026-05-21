@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     seed_enabled: bool = True
     seed_person_count: int = 1000
 
-    cors_origins: list[str] = ["http://localhost:5173", "http://localhost:3000"]
+    cors_origins: list[str] = ["http://localhost:5173", "http://localhost:3800"]
 
     session_cookie_name: str = "crudfab_session"
     session_cookie_secure: bool = False

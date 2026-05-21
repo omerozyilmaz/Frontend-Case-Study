@@ -17,10 +17,28 @@ docker compose up --build
 
 | Servis      | URL                          |
 | ----------- | ---------------------------- |
-| Frontend    | http://localhost:3000        |
+| Frontend    | http://localhost:3800        |
 | Backend API | http://localhost:8000        |
 | Swagger     | http://localhost:8000/docs   |
 | PostgreSQL  | localhost:5432               |
+
+Frontend konteyneri içinde Nginx 80 portunda çalışır; dışarıda **3800** portuna map edilir
+(`3800:80`). Tarayıcıda uygulamayı şu adresten açın:
+
+**http://localhost:3800**
+
+İlk açılışta oturum olmadığı için uygulama sizi giriş sayfasına yönlendirir. Adres çubuğunda
+örneğin şunu görmeniz normaldir:
+
+`http://localhost:3800/login?returnTo=%2F`
+
+- `/login` — giriş ekranı
+- `returnTo=%2F` — girişten sonra dönülecek sayfa (`%2F` = `/`, yani kişi listesi)
+
+Doğrudan giriş sayfası: http://localhost:3800/login
+
+Varsayılan hesaplarla giriş yaptıktan sonra kişi listesine (`/`) yönlendirilirsiniz. `/api`
+istekleri aynı origin üzerinden Nginx proxy ile backend'e gider; ekstra CORS ayarı gerekmez.
 
 Volume'ları da silmek için: `docker compose down -v`.
 
@@ -71,7 +89,7 @@ Seed otomatik oluşturur:
 | `SESSION_COOKIE_NAME`       | `crudfab_session`                                                  | Cookie adı                                   |
 | `SESSION_COOKIE_SECURE`     | `false`                                                            | HTTPS arkasında `true`                       |
 | `SESSION_COOKIE_SAMESITE`   | `lax`                                                              | `lax` / `strict` / `none`                    |
-| `CORS_ORIGINS`              | `["http://localhost:5173","http://localhost:3000"]`                | İzinli origin listesi                        |
+| `CORS_ORIGINS`              | `["http://localhost:5173","http://localhost:3800"]`                | İzinli origin listesi                        |
 | `SEED_ENABLED`              | `true`                                                             | Seed'i kapatmak için `false`                 |
 | `SEED_PERSON_COUNT`         | `1000`                                                             | Seed kişi sayısı                             |
 
