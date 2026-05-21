@@ -22,6 +22,8 @@
     "logout": "Çıkış",
     "email": "E-posta",
     "password": "Şifre",
+    "showPassword": "Şifreyi göster",
+    "hidePassword": "Şifreyi gizle",
     "loginTitle": "Hesabınıza giriş yapın",
     "loginError": "E-posta veya şifre hatalı",
     "roleAdmin": "Yönetici",

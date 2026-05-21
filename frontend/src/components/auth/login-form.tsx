@@ -1,6 +1,17 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Alert, Box, Button, Paper, TextField, Typography } from "@mui/material";
-import { useEffect } from "react";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import {
+  Alert,
+  Box,
+  Button,
+  IconButton,
+  InputAdornment,
+  Paper,
+  TextField,
+  Typography,
+} from "@mui/material";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -12,6 +23,7 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks";
 
 export function LoginForm() {
   const { t } = useTranslation();
+  const [showPassword, setShowPassword] = useState(false);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -81,12 +93,29 @@ export function LoginForm() {
           <TextField
             {...register("password")}
             label={t("auth.password")}
-            type="password"
+            type={showPassword ? "text" : "password"}
             fullWidth
             margin="normal"
             error={Boolean(errors.password)}
             helperText={errors.password ? t("validation.minLength", { min: 6 }) : " "}
             autoComplete="current-password"
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton
+                      type="button"
+                      aria-label={showPassword ? t("auth.hidePassword") : t("auth.showPassword")}
+                      onClick={() => setShowPassword((prev) => !prev)}
+                      onMouseDown={(e) => e.preventDefault()}
+                      edge="end"
+                    >
+                      {showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              },
+            }}
           />
           <Button
             type="submit"

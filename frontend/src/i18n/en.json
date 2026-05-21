@@ -22,6 +22,8 @@
     "logout": "Sign out",
     "email": "Email",
     "password": "Password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
     "loginTitle": "Sign in to your account",
     "loginError": "Invalid email or password",
     "roleAdmin": "Administrator",
