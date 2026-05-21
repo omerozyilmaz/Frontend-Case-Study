@@ -1,0 +1,76 @@
+{
+  "app": {
+    "title": "CrudFab",
+    "subtitle": "Güvenli kimlik ve meslek bilgileri yönetimi"
+  },
+  "common": {
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "add": "Ekle",
+    "search": "Ara",
+    "clear": "Filtreleri temizle",
+    "loading": "Yükleniyor…",
+    "actions": "İşlemler",
+    "confirm": "Onayla",
+    "confirmDelete": "Bu kaydı silmek istediğinize emin misiniz? Bu işlem geri alınamaz.",
+    "deleteTitle": "Kaydı sil"
+  },
+  "auth": {
+    "login": "Giriş yap",
+    "logout": "Çıkış",
+    "email": "E-posta",
+    "password": "Şifre",
+    "loginTitle": "Hesabınıza giriş yapın",
+    "loginError": "E-posta veya şifre hatalı",
+    "roleAdmin": "Yönetici",
+    "roleUser": "Kullanıcı"
+  },
+  "nav": {
+    "persons": "Kişi kayıtları"
+  },
+  "persons": {
+    "title": "Kişi kayıtları",
+    "addPerson": "Kişi ekle",
+    "editPerson": "Kişi düzenle",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "tckn": "T.C. Kimlik No",
+    "tcknMasked": "T.C. Kimlik No",
+    "email": "E-posta",
+    "professionGroup": "Meslek grubu",
+    "createdAt": "Kayıt tarihi",
+    "noRows": "Kayıt bulunamadı",
+    "deleteSuccess": "Kayıt silindi",
+    "createSuccess": "Kayıt oluşturuldu",
+    "updateSuccess": "Kayıt güncellendi"
+  },
+  "filters": {
+    "title": "Filtreler",
+    "nameContains": "Ad / soyad içerir",
+    "namePlaceholder": "Örn: Ahmet",
+    "tcknPrefix": "TCKN öneki",
+    "tcknPlaceholder": "İlk haneler",
+    "professionGroups": "Meslek grupları"
+  },
+  "pagination": {
+    "rowsPerPage": "Sayfa başına",
+    "of": "/"
+  },
+  "validation": {
+    "required": "Bu alan zorunludur",
+    "email": "Geçerli bir e-posta girin",
+    "minLength": "En az {{min}} karakter olmalı",
+    "tcknLength": "TCKN 11 haneli olmalıdır",
+    "tcknInvalid": "Geçersiz TCKN",
+    "professionGroup": "Meslek grubu seçin"
+  },
+  "errors": {
+    "generic": "Bir hata oluştu. Lütfen tekrar deneyin.",
+    "unauthorized": "Oturum süresi doldu. Lütfen tekrar giriş yapın.",
+    "forbidden": "Bu işlem için yetkiniz yok.",
+    "notFound": "Kayıt bulunamadı.",
+    "conflict": "Bu kayıt zaten mevcut."
+  }
+}

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment
+.env
+backend/.env
+
+# Database
+*.db
+backend/crudfab.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Node
+node_modules/
+frontend/dist/
