@@ -185,16 +185,6 @@ frontend/
     utils/
 ```
 
-## Frontend notları
-
-- `RouteGuard` tek bileşendir; `mode="auth"` ya da `mode="guest"` ile çalışır. Admin sınırlaması
-  için `AdminGuard` veya `useAppSelector(selectIsAdmin)`.
-- State Redux Toolkit slice + thunk üzerinden. UI state'i (dialog açık mı vs.) sayfa seviyesinde
-  `useState` ile tutulur.
-- Form: `react-hook-form` + `zodResolver`. TCKN için uzunluk + TC checksum (`utils/tckn.ts`).
-- Hata gösterimi: `ErrorSnackbar` HTTP status'una göre i18n key seçer; form hataları alanın
-  altında gösterilir.
-- Silme onayı `window.confirm` yerine `ConfirmDialog`.
 
 ## Geliştirme komutları
 
